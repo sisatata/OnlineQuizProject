@@ -142,3 +142,25 @@ margin-top: 40px;
 }
 
 
+.question-part ul li{
+    list-style-type: none;
+}
+.question-part ul li a{
+    text-decoration: none;
+    padding: 0;
+}
+.question-part ul{
+    padding: 0;
+
+}
+.question-part {
+    margin-top: 50px;
+}
+.question-part ul li:hover{
+    cursor: pointer;
+}
+.btn{
+    width: 100%;
+    margin: 20px 0;
+}
+
