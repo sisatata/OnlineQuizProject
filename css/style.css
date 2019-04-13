@@ -164,3 +164,17 @@ margin-top: 40px;
     margin: 20px 0;
 }
 
+.questionDiv {
+    color: white;
+}
+
+.resultDiv{
+    text-align: left;
+    color: white;
+}
+#retake-btn{
+    display: none;
+}
+.hidden{
+    display: none;
+}

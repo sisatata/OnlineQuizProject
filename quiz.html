@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
-<body  onload="increase()">
+<body onload="onLoad()">
 <header>
     <div class="container">
         <div class="row">
@@ -21,29 +21,47 @@
 <div class="question-part">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="questioDiv">
+
+            <div class="col-12  offset-md-4">
+                <div class="resultDiv">
+                    <h1  id="result"></h1>
+                    <h2  id="verdict"></h2>
+                </div>
+
+                <div class="questionDiv">
+
                     <h2 id="questionNo"></h2>
                     <h3 id="question"></h3>
-                  <div class="questioOptions">
-                    <ul>
-                        <li class="options" id="1">A: </li>
-                        <li class="options" id="2">B: </li>
-                        <li class="options" id="3">C: </li>
-                        <li class="options" id="4">D: </li>
+                    <div class="questioOptions">
+                        <ul>
+                            <li class="options" id="1" onclick="storeAnswer();">A:</li>
+                            <li class="options" id="2" onclick="storeAnswer();">B:</li>
+                            <li class="options" id="3" onclick="storeAnswer();">C:</li>
+                            <li class="options" id="4" onclick="storeAnswer();">D:</li>
 
 
-                    </ul>
+                        </ul>
 
-                  </div>
-
+                    </div>
 
 
                 </div>
             </div>
-            <div class="col-md-4"><button class="btn btn-primary" onclick="increase()" id="next-btn">Next</button></div>
-            <div class="col-md-4"> <button class="btn btn-primary">Previous</button></div>
-            <div class="col-md-4"> <button class="btn btn-primary">Submit</button></div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary"  id="prev-btn"   onclick="decrease()">Previous</button>
+
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" id="next-btn"  onclick="increase()">Next</button>
+                <button class="btn btn-primary"  id="retake-btn"     onclick="decrease()">Retake Exam</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary"  id="submit-btn" onclick="result()" >Submit</button>
+            </div>
         </div>
     </div>
 </div>
