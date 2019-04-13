@@ -76,7 +76,7 @@ function checkValidation() {
         document.getElementById("wrong").innerHTML = wrong;
         return false;
     }
-
+  
 }
 
 /*Option Pages*/
@@ -437,6 +437,7 @@ function result() {
         document.getElementById("verdict").innerHTML = "Poor";
     } else {
         document.getElementById("verdict").innerHTML = "Fail";
+        document.getElementById("verdict").style.color = "red";
     }
     score = 0;
     answered = [];
