@@ -11,8 +11,8 @@ var chooseOption;
 var count = 0;
 var questionHeading = "Question Number:";
 
-var score = 0;
-var answered = [];
+var score = 0;   //calculate your score
+var answered = [];   //store answer
 
 
 var optionDescription;
@@ -51,6 +51,7 @@ var users = [
 
 ];
 /*Sign In Page*/
+
 //  Check username and password
 function checkValidation() {
     var i, j;
@@ -77,11 +78,13 @@ function checkValidation() {
     }
 
 }
-/*Option Pages*/
-//function to go js quiz page
-function  javascript() {
 
-    window.location="quiz.html";
+/*Option Pages*/
+
+//function to go js quiz page
+function javascript() {
+
+    window.location = "quiz.html";
 
 }
 
@@ -235,6 +238,8 @@ var questions = [
 //function to go to next question and reset
 
 function onLoad() {
+    count = 0;
+    answered = [];
 
     checkPage();
 
@@ -469,7 +474,7 @@ function displayUnset() {
 
     action[0].style.display = "block";
     action[2].style.display = "block";
-    action[1].textContent = "Next";
+
     document.getElementById("result").style.display = "none";
     document.getElementById("verdict").style.display = "none";
     document.getElementById("retake-btn").style.display = "none";
