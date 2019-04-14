@@ -190,3 +190,8 @@ margin-top: 40px;
 .hidden{
     display: none;
 }
+header h4{
+    text-align: right;
+    font-size: 30px;
+    color: white;
+}
