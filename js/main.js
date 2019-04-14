@@ -532,21 +532,6 @@ function clock() {
             seconds1++;
         }
 
-        // if (seconds2 > 9) {
-        //     if (seconds1 >= 5) {
-        //         if (mins >= 29) {
-        //             seconds1 = 0;
-        //             seconds2 = 1;
-        //             mins = 0;
-        //             onLoad();
-        //         }
-        //         seconds2 = 1;
-        //         seconds1 = 0;
-        //         mins++;
-        //     }
-        //     seconds2 = 1;
-        //     seconds1++;
-        // }
         document.getElementById("timer").innerHTML = "Elapsed Time: " + mins + ":" + seconds1 + seconds2;
         seconds2++;
 
