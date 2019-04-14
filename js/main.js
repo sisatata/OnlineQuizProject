@@ -14,8 +14,11 @@ var questionHeading = "Question Number:";
 var score = 0;   //calculate your score
 var answered = [];   //store answer
 
-
+var mins = 0;
+var seconds1 = 0;
+var seconds2 = 1;
 var optionDescription;
+var timer;
 
 function toggleResetPswd(e) {
     e.preventDefault();
@@ -76,7 +79,7 @@ function checkValidation() {
         document.getElementById("wrong").innerHTML = wrong;
         return false;
     }
-  
+
 }
 
 /*Option Pages*/
@@ -237,10 +240,14 @@ var questions = [
 
 //function to go to next question and reset
 
-function onLoad() {
+function onLoad(para) {
     count = 0;
     answered = [];
-
+    mins = 0;
+    seconds2 = 1;
+    seconds1 = 0;
+    clearInterval(timer);
+    clock();
     checkPage();
 
 
@@ -494,6 +501,57 @@ function checkPage() {
         document.getElementById("prev-btn").disabled = false;
 
     }
+
+
+}
+
+function clock() {
+
+
+    mins = 0;
+    seconds2 = 1;
+    seconds1 = 0;
+    timer = setInterval(function () {
+
+
+        if (seconds2 > 9 && seconds1 >= 5 && mins > 29) {
+            seconds1 = 0;
+            seconds2 = 1;
+            mins = 0;
+            onLoad();
+
+        }
+       else  if( seconds2>9 && seconds1>=5){
+            seconds2 = 0;
+            seconds1 = 0;
+            mins++;
+        }
+       else if(seconds2>9)
+        {
+            seconds2 = 0;
+            seconds1++;
+        }
+
+        // if (seconds2 > 9) {
+        //     if (seconds1 >= 5) {
+        //         if (mins >= 29) {
+        //             seconds1 = 0;
+        //             seconds2 = 1;
+        //             mins = 0;
+        //             onLoad();
+        //         }
+        //         seconds2 = 1;
+        //         seconds1 = 0;
+        //         mins++;
+        //     }
+        //     seconds2 = 1;
+        //     seconds1++;
+        // }
+        document.getElementById("timer").innerHTML = "Elapsed Time: " + mins + ":" + seconds1 + seconds2;
+        seconds2++;
+
+
+    }, 1000)
 
 
 }
