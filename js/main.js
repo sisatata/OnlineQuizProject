@@ -532,6 +532,7 @@ function clock() {
             seconds1++;
         }
 
+
         document.getElementById("timer").innerHTML = "Elapsed Time: " + mins + ":" + seconds1 + seconds2;
         seconds2++;
 
