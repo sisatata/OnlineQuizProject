@@ -19,6 +19,9 @@ var seconds1 = 0;
 var seconds2 = 1;
 var optionDescription;
 var timer;
+var totalAnswered = [];
+
+var totsum = 0;
 
 function toggleResetPswd(e) {
     e.preventDefault();
@@ -61,7 +64,6 @@ function checkValidation() {
     var len = users.length;
     getName = document.getElementById("userName").value;
     getPass = document.getElementById("userPassword").value;
-
 
     for (i = 0; i < len; i++) {
         checkName = users[i].userName;
@@ -246,6 +248,10 @@ function onLoad(para) {
     mins = 0;
     seconds2 = 1;
     seconds1 = 0;
+    totalAnswered = [];
+    totsum = 0;
+    initialize();
+    document.getElementById("answered").innerHTML = "Total Answered: " + totsum;
     clearInterval(timer);
     clock();
     checkPage();
@@ -290,12 +296,18 @@ function storeAnswer() {
     var indx4 = document.getElementById("4");
     reset();
 
+
     document.getElementById("1").onclick = function () {
 
 
         answered[count] = 1;
         reset();
         indx1.style.color = "orange";
+        totalAnswered[count] = 1;
+
+
+        var now = totalAnsweredCount();
+        document.getElementById("answered").innerHTML = now;
 
 
     };
@@ -304,6 +316,10 @@ function storeAnswer() {
         reset();
         answered[count] = 2;
         indx2.style.color = "orange";
+        totalAnswered[count] = 1;
+
+        var now = totalAnsweredCount();
+        document.getElementById("answered").innerHTML = now;
 
 
     };
@@ -312,6 +328,9 @@ function storeAnswer() {
         reset();
         answered[count] = 3;
         indx3.style.color = "orange";
+        totalAnswered[count] = 1;
+        var now = totalAnsweredCount();
+        document.getElementById("answered").innerHTML = now;
 
 
     };
@@ -320,6 +339,9 @@ function storeAnswer() {
         reset();
         answered[count] = 4;
         indx4.style.color = "orange";
+        totalAnswered[count] = 1;
+        var now = totalAnsweredCount();
+        document.getElementById("answered").innerHTML = now;
 
 
     };
@@ -520,14 +542,11 @@ function clock() {
             mins = 0;
             onLoad();
 
-        }
-       else  if( seconds2>9 && seconds1>=5){
+        } else if (seconds2 > 9 && seconds1 >= 5) {
             seconds2 = 0;
             seconds1 = 0;
             mins++;
-        }
-       else if(seconds2>9)
-        {
+        } else if (seconds2 > 9) {
             seconds2 = 0;
             seconds1++;
         }
@@ -542,5 +561,24 @@ function clock() {
 
 }
 
+function initialize() {
 
+    var i;
+    for (i = 0; i < 20; i++) {
+        totalAnswered[i] = 0;
+    }
+}
+
+// function to count total number of answered
+function totalAnsweredCount() {
+    var i;
+    var sum = 0;
+    for (i = 0; i < 20; i++) {
+        sum += totalAnswered[i];
+    }
+
+    return "Total Answered: " + sum;
+
+
+}
 
