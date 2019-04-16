@@ -189,6 +189,9 @@ margin-top: 40px;
 #retake-btn{
     display: none;
 }
+#showAnswer{
+    display: none;
+}
 .hidden{
     display: none;
 }
@@ -196,4 +199,17 @@ header h4{
     text-align: right;
     font-size: 30px;
     color: white;
+}
+/*Answer page*/
+.ans h4{
+    color: azure;
+}
+.ans{
+ margin: 30px;
+}
+.ans h5{
+    color: aquamarine;
+}
+.ans button{
+    max-width: 250px;
 }

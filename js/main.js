@@ -485,6 +485,7 @@ function result() {
 function displaySet() {
 
     document.getElementById("retake-btn").style.display = "block";
+    document.getElementById("showAnswer").style.display = "block";
     document.getElementById("submit-btn").style.display = "none";
     document.getElementById("result").style.display = "block";
     document.getElementById("verdict").style.display = "block";
@@ -509,6 +510,7 @@ function displayUnset() {
     document.getElementById("result").style.display = "none";
     document.getElementById("verdict").style.display = "none";
     document.getElementById("retake-btn").style.display = "none";
+    document.getElementById("showAnswer").style.display = "none";
     document.getElementById("next-btn").style.display = "block";
     document.getElementById("prev-btn").style.display = "block";
     document.getElementById("submit-btn").style.display = "block";
@@ -582,17 +584,27 @@ function totalAnsweredCount() {
 
 
 }
-
+//function for showing Answeres
 function showAnswer() {
     var i;
     var ques = document.getElementsByTagName("h4");
     var ans = document.getElementsByTagName("h5");
     for(i=0;i<20;i++){
         ques[i].innerHTML=questions[i].question;
-        var getAns=questions[i].answer;
+        var getAns=questions[i].answer-1;
         ans[i].innerHTML=questions[i].options[getAns];
     }
 }
 
 
+//go bask quiz page
+function goBack() {
 
+    window.location="quiz.html";
+
+}
+//function to go answer page
+function goAnswer() {
+
+    window.location="ans.html";
+}
