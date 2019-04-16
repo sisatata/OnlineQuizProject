@@ -156,6 +156,7 @@ margin-top: 40px;
 
 .question-part ul li{
     list-style-type: none;
+    max-width: 500px;
 }
 .question-part ul li a{
     text-decoration: none;
@@ -178,6 +179,7 @@ margin-top: 40px;
 
 .questionDiv {
     color: white;
+    max-width: 600px;
 }
 
 .resultDiv{

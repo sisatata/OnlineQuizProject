@@ -242,7 +242,8 @@ var questions = [
 
 //function to go to next question and reset
 
-function onLoad(para) {
+function onLoad() {
+
     count = 0;
     answered = [];
     mins = 0;
@@ -581,4 +582,17 @@ function totalAnsweredCount() {
 
 
 }
+
+function showAnswer() {
+    var i;
+    var ques = document.getElementsByTagName("h4");
+    var ans = document.getElementsByTagName("h5");
+    for(i=0;i<20;i++){
+        ques[i].innerHTML=questions[i].question;
+        var getAns=questions[i].answer;
+        ans[i].innerHTML=questions[i].options[getAns];
+    }
+}
+
+
 
