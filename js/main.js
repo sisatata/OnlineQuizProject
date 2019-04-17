@@ -71,7 +71,7 @@ function checkValidation() {
         if ((getName === checkName) && (getPass === checkPass)) {
 
             loginSuccess = true;
-            localStorage.setItem("Name",getName);
+            localStorage.setItem("Name", getName);
             return true;
 
         }
@@ -82,7 +82,6 @@ function checkValidation() {
         document.getElementById("wrong").innerHTML = wrong;
         return false;
     }
-
 
 
 }
@@ -247,7 +246,8 @@ var questions = [
 
 function onLoad() {
 
-    document.getElementById("uName").innerHTML=localStorage.getItem("Name");
+    var name = document.getElementById("uName").innerHTML = localStorage.getItem("Name");
+
     count = 0;
     answered = [];
     mins = 0;
@@ -434,7 +434,7 @@ function decrease() {
     var questionDescription;
 
 
-    document.getElementById("questionNo").innerHTML = questionHeading  + (count + 1);
+    document.getElementById("questionNo").innerHTML = questionHeading + (count + 1);
     questionDescription = questions[count].question;
     document.getElementById("question").innerHTML = questionDescription;
     document.getElementsByClassName("options");
@@ -468,8 +468,8 @@ function result() {
     }
 
     score = score * 5;
-    var name=localStorage.getItem("Name");
-    document.getElementById("result").innerHTML = name+" "+ "Your Score: " + score;
+    var name = localStorage.getItem("Name");
+    document.getElementById("result").innerHTML = name + " " + "Your Score: " + score;
     if (score >= 90) {
         document.getElementById("verdict").innerHTML = "Excellent";
     } else if (score >= 80) {
@@ -611,7 +611,7 @@ function showAnswer() {
 }
 
 
-//go bask quiz page
+//go back quiz page
 function goBack() {
 
     window.location = "quiz.html";
@@ -623,4 +623,3 @@ function goAnswer() {
 
     window.location = "ans.html";
 }
-
