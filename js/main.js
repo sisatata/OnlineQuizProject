@@ -71,6 +71,7 @@ function checkValidation() {
         if ((getName === checkName) && (getPass === checkPass)) {
 
             loginSuccess = true;
+            localStorage.setItem("Name",getName);
             return true;
 
         }
@@ -81,6 +82,8 @@ function checkValidation() {
         document.getElementById("wrong").innerHTML = wrong;
         return false;
     }
+
+
 
 }
 
@@ -244,6 +247,7 @@ var questions = [
 
 function onLoad() {
 
+    document.getElementById("uName").innerHTML=localStorage.getItem("Name");
     count = 0;
     answered = [];
     mins = 0;
@@ -464,7 +468,8 @@ function result() {
     }
 
     score = score * 5;
-    document.getElementById("result").innerHTML = "Your Score: " + score;
+    var name=localStorage.getItem("Name");
+    document.getElementById("result").innerHTML = name+" "+ "Your Score: " + score;
     if (score >= 90) {
         document.getElementById("verdict").innerHTML = "Excellent";
     } else if (score >= 80) {
@@ -618,3 +623,4 @@ function goAnswer() {
 
     window.location = "ans.html";
 }
+

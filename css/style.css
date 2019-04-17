@@ -201,6 +201,11 @@ header h4{
     font-size: 30px;
     color: white;
 }
+#uName{
+    font-size: 20px;
+    float: right;
+    color: white;
+}
 /*Footer*/
 footer h2{
     margin-top: 40px;
