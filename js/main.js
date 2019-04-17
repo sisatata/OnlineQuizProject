@@ -384,7 +384,7 @@ function increase() {
     var check2 = document.getElementById("2").style.color;
     var check3 = document.getElementById("3").style.color;
     var check4 = document.getElementById("4").style.color;
-    if (check1 === "white" && check2 === "white" && check4 === "white" && check1 === "white") {
+    if (check1 === "white" && check2 === "white" && check4 === "white" && check3 === "white") {
         alert("please select an option");
         return;
     }
