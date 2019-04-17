@@ -10,11 +10,7 @@ body {
 }
 
 /*form Part*/
-form.form-signin {
-    width: 20%;
-    margin: 0 auto;
-    margin-top: 30px;
-}
+
 
 #wrong {
     color: red;
@@ -57,9 +53,6 @@ form.form-signin {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-
-
-
 
 
 .submit {
