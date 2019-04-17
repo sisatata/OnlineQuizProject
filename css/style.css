@@ -9,6 +9,14 @@ body{
     font-size: 17px;
 }
 /*form Part*/
+form.form-signin {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#wrong{
+    color: red;
+}
 #logreg-forms{
     width:412px;
     margin:10vh auto;
@@ -86,9 +94,6 @@ body{
     background: -webkit-linear-gradient(0deg,  #2dfbff 0%, #3c96ff 100%);
     border-radius: 25px;
     color: #fff;
-}
-#wrong{
-    color: red;
 }
 /*Text*/
 header h1, .main-part h2,footer h2{
