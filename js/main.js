@@ -9,7 +9,7 @@ var loginSuccess = false;
 var wrong = "Wrong User Name Or Password ";
 var chooseOption;
 var count = 0;
-var questionHeading = "Question Number:";
+var questionHeading = "Question Number: ";
 
 var score = 0;   //calculate your score
 var answered = [];   //store answer
@@ -383,6 +383,14 @@ function isAnswered() {
 
 // function to next page
 function increase() {
+    var check1 = document.getElementById("1").style.color;
+    var check2 = document.getElementById("2").style.color;
+    var check3 = document.getElementById("3").style.color;
+    var check4 = document.getElementById("4").style.color;
+    if (check1 === "white" && check2 === "white" && check4 === "white" && check1 === "white") {
+        alert("please select an option");
+        return;
+    }
 
 
     count++;
@@ -422,7 +430,7 @@ function decrease() {
     var questionDescription;
 
 
-    document.getElementById("questionNo").innerHTML = questionHeading + (count + 1);
+    document.getElementById("questionNo").innerHTML = questionHeading  + (count + 1);
     questionDescription = questions[count].question;
     document.getElementById("question").innerHTML = questionDescription;
     document.getElementsByClassName("options");
@@ -584,15 +592,16 @@ function totalAnsweredCount() {
 
 
 }
+
 //function for showing Answeres
 function showAnswer() {
     var i;
     var ques = document.getElementsByTagName("h4");
     var ans = document.getElementsByTagName("h5");
-    for(i=0;i<20;i++){
-        ques[i].innerHTML=questions[i].question;
-        var getAns=questions[i].answer-1;
-        ans[i].innerHTML=questions[i].options[getAns];
+    for (i = 0; i < 20; i++) {
+        ques[i].innerHTML = questions[i].question;
+        var getAns = questions[i].answer - 1;
+        ans[i].innerHTML = questions[i].options[getAns];
     }
 }
 
@@ -600,11 +609,12 @@ function showAnswer() {
 //go bask quiz page
 function goBack() {
 
-    window.location="quiz.html";
+    window.location = "quiz.html";
 
 }
+
 //function to go answer page
 function goAnswer() {
 
-    window.location="ans.html";
+    window.location = "ans.html";
 }
