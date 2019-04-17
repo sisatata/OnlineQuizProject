@@ -1,7 +1,7 @@
 /* Mobile */
 
 @media screen and (max-width:576px){
-    @media screen and (max-width:500px){
+
         #logreg-forms{
             width:300px;
         }
@@ -34,4 +34,3 @@
         }
 
     }
-}

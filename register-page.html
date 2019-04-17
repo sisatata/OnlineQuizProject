@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div id="logreg-forms">
+                <form class="form-signup" onsubmit="return regValidation(this);" action="index.html">
+                    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign Up</h1>
+
+                    <div class="input-group">
+                        <input type="text" id="regName" class="form-control" placeholder="Full Name" required=""
+                               autofocus="">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="regUser" class="form-control" placeholder="User Name"
+                               required="">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="regEmail" class="form-control" placeholder="Email"
+                               required="">
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="regTel" class="form-control" placeholder="Phone"
+                               required="">
+                    </div>
+                    <div class="input-group">
+                        <select name="lang" id="lang" class="form-control">
+                            <option selected=""> Select Prefered Option</option>
+                            <option value="html">Html</option>
+                            <option value="js">Javascript</option>
+                            <option value="css">CSS</option>
+                        </select>
+                    </div>
+                    <div class="input-group" id="gender">
+                        <span>Gender: </span>
+                        <input type="radio" name="gender" class="gender" value="male" id="male" required> Male
+                        <input type="radio" name="gender" class="gender" value="female" id="female" required> Female
+
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regPass" class="form-control" placeholder="Password"
+                               required="">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regRePass" class="form-control" placeholder="Retype Password"
+                               required="">
+                    </div>
+
+                    <div class="input-group">
+                        <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i
+                                class="fas fa-sign-in-alt"></i> Sign up
+                        </button>
+                    </div>
+
+
+                    <hr>
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>

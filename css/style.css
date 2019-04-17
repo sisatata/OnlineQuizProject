@@ -220,3 +220,17 @@ footer h2 {
 .ans button {
     max-width: 250px;
 }
+
+/*Registration Page*/
+
+
+#gender{
+    margin-top: 10px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    margin: 6px;
+}
+input#regPass {
+    margin-top: 5px;
+}

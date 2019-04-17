@@ -20,8 +20,10 @@ var seconds2 = 1;
 var optionDescription;
 var timer;
 var totalAnswered = [];
-
+var regUser = "";
+var regPass = "";
 var totsum = 0;
+
 
 function toggleResetPswd(e) {
     e.preventDefault();
@@ -29,6 +31,9 @@ function toggleResetPswd(e) {
 
 }
 
+function registration() {
+    window.location = "register-page.html";
+}
 
 
 // Database for users
@@ -54,6 +59,7 @@ var users = [
 //  Check username and password
 function checkValidation() {
     var i, j;
+
     var len = users.length;
     getName = document.getElementById("userName").value;
     getPass = document.getElementById("userPassword").value;
@@ -70,6 +76,11 @@ function checkValidation() {
         }
 
     }
+    if(localStorage.User===getName && localStorage.Pass===getPass){
+        localStorage.setItem("Name", getName);
+        return true;
+    }
+
     if (loginSuccess === false && getName.length > 0 && getPass.length > 0) {
 
         document.getElementById("wrong").innerHTML = wrong;
@@ -615,4 +626,33 @@ function goBack() {
 function goAnswer() {
 
     window.location = "ans.html";
+}
+
+// registration form
+function regValidation() {
+    var regPass = document.getElementById("regPass").value;
+    var regRePass = document.getElementById("regRePass").value;
+    var checkedValue = document.querySelector('.gender:checked').value;
+    var regName = document.getElementById("regName").value;
+    regUser = document.getElementById("regUser").value;
+    regPass = document.getElementById("regPass").value;
+
+    localStorage.User = regUser;
+    localStorage.Pass = regPass;
+
+    if (regPass !== regRePass) {
+        alert("Password doesn't match");
+        return false;
+    }
+
+    return true;
+
+
+}
+
+
+function help() {
+
+
+
 }
