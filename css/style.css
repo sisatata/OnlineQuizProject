@@ -195,6 +195,9 @@ margin-top: 40px;
 .hidden{
     display: none;
 }
+p#timer {
+    color: aquamarine;
+}
 header h4{
     text-align: right;
     font-size: 30px;
