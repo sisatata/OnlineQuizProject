@@ -23,6 +23,18 @@ var totalAnswered = [];
 var regUser = "";
 var regPass = "";
 var totsum = 0;
+var userArray = [];
+
+function Person(a, b, c, d, e) {
+
+    var username, fullname, phone, password, address, gender;
+    this.username = a;
+    this.fullname = b;
+    this.phone = c;
+    this.password = d;
+    this.address = e;
+
+}
 
 
 function toggleResetPswd(e) {
@@ -76,7 +88,7 @@ function checkValidation() {
         }
 
     }
-    if(localStorage.User===getName && localStorage.Pass===getPass){
+    if (localStorage.User === getName && localStorage.Pass === getPass) {
         localStorage.setItem("Name", getName);
         return true;
     }
@@ -636,9 +648,10 @@ function regValidation() {
     var regName = document.getElementById("regName").value;
     regUser = document.getElementById("regUser").value;
     regPass = document.getElementById("regPass").value;
-
-    localStorage.User = regUser;
-    localStorage.Pass = regPass;
+    var address = document.getElementById("address").value;
+    var phone = document.getElementById("regTel").value;
+    var newUser = new Person(regUser, regName, phone, regPass, address);
+    userArray.push(newUser);
 
     if (regPass !== regRePass) {
         alert("Password doesn't match");
@@ -652,7 +665,17 @@ function regValidation() {
 
 
 function help() {
+    var regPass = document.getElementById("regPass").value;
+    var regRePass = document.getElementById("regRePass").value;
+    var checkedValue = document.querySelector('.gender:checked').value;
+    var regName = document.getElementById("regName").value;
+    regUser = document.getElementById("regUser").value;
+    regPass = document.getElementById("regPass").value;
+    var address = document.getElementById("address").value;
+    var phone = document.getElementById("regTel").value;
+    var newUser = new Person(regUser, regName, phone, regPass, address);
+    userArray.push(newUser);
 
-
-
+    alert(userArray.length);
 }
+
