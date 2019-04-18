@@ -25,14 +25,15 @@ var regPass = "";
 var totsum = 0;
 var userArray = [];
 
-function Person(a, b, c, d, e) {
+function Person(a, b, c, d, e, f) {
 
-    var username, fullname, phone, password, address, gender;
+    var username, fullname, phone, password, address, gender, age;
     this.username = a;
     this.fullname = b;
     this.phone = c;
     this.password = d;
     this.address = e;
+    this.age = f;
 
 }
 
@@ -53,16 +54,29 @@ var users = [
     {
 
         userName: "shakil",
-        password: "123"
+        password: "123",
+        age:"23",
+        phone:"018",
+        gender:"male",
+        address:"banasree"
+
     },
     {
         userName: "sadiqul",
-        password: "456"
+        password: "456",
+        age:"25",
+        phone:"016",
+        gender:"male",
+        address:"Farmgate"
 
     },
     {
         userName: "jamiul",
-        password: "678"
+        password: "678",
+        age:"27",
+        phone:"015",
+        gender:"male",
+        address:"banasree"
     }
 
 ];
@@ -651,7 +665,12 @@ function regValidation() {
     var address = document.getElementById("address").value;
     var phone = document.getElementById("regTel").value;
     var newUser = new Person(regUser, regName, phone, regPass, address);
+    var ageUser = document.getElementById("age").value;
     userArray.push(newUser);
+    if(ageUser<0){
+        alert("Age must bo positive");
+        return  false;
+    }
 
     if (regPass !== regRePass) {
         alert("Password doesn't match");
@@ -665,17 +684,23 @@ function regValidation() {
 
 
 function help() {
-    var regPass = document.getElementById("regPass").value;
-    var regRePass = document.getElementById("regRePass").value;
-    var checkedValue = document.querySelector('.gender:checked').value;
-    var regName = document.getElementById("regName").value;
-    regUser = document.getElementById("regUser").value;
-    regPass = document.getElementById("regPass").value;
-    var address = document.getElementById("address").value;
-    var phone = document.getElementById("regTel").value;
-    var newUser = new Person(regUser, regName, phone, regPass, address);
-    userArray.push(newUser);
+    // var regPass = document.getElementById("regPass").value;
+    // var regRePass = document.getElementById("regRePass").value;
+    // var checkedValue = document.querySelector('.gender:checked').value;
+    // var regName = document.getElementById("regName").value;
+    // regUser = document.getElementById("regUser").value;
+    // regPass = document.getElementById("regPass").value;
+    // var address = document.getElementById("address").value;
+    // var phone = document.getElementById("regTel").value;
+    // var newUser = new Person(regUser, regName, phone, regPass, address);
+    // userArray.push(newUser);
+    //
+    // alert(userArray.length);
+    var e = document.getElementById("lang");
+    var strUser = e.options[e.selectedIndex].value;
+    var now=document.getElementById("age").value;
+    alert(now);
 
-    alert(userArray.length);
+
 }
 
