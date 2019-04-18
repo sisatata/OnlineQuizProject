@@ -52,31 +52,33 @@ function registration() {
 // Database for users
 var users = [
     {
-
+        fullName: "Shakil Ahmed",
         userName: "shakil",
         password: "123",
-        age:"23",
-        phone:"018",
-        gender:"male",
-        address:"banasree"
+        age: "23",
+        phone: "018",
+        gender: "male",
+        address: "banasree"
 
     },
     {
+        fullName: "Sadiqul Islam",
         userName: "sadiqul",
         password: "456",
-        age:"25",
-        phone:"016",
-        gender:"male",
-        address:"Farmgate"
+        age: "25",
+        phone: "016",
+        gender: "male",
+        address: "Farmgate"
 
     },
     {
+        fullName: "Jamiil Alam",
         userName: "jamiul",
         password: "678",
-        age:"27",
-        phone:"015",
-        gender:"male",
-        address:"banasree"
+        age: "27",
+        phone: "015",
+        gender: "male",
+        address: "banasree"
     }
 
 ];
@@ -667,40 +669,49 @@ function regValidation() {
     var newUser = new Person(regUser, regName, phone, regPass, address);
     var ageUser = document.getElementById("age").value;
     userArray.push(newUser);
-    if(ageUser<0){
+    if (ageUser < 0) {
         alert("Age must bo positive");
-        return  false;
+
+        var now = document.getElementsByTagName("input");
+        for (var i = 0; i < now.length; i++) {
+            now[i].value = "";
+            return false;
+        }
+
+        if (regPass !== regRePass) {
+            var now = document.getElementsByTagName("input");
+            for (var i = 0; i < now.length; i++) {
+                now[i].value = "";
+            }
+            alert("Password doesn't match");
+            return false;
+        }
+
+        return true;
+
+
     }
-
-    if (regPass !== regRePass) {
-        alert("Password doesn't match");
-        return false;
-    }
-
-    return true;
-
-
 }
 
+    function iterate() {
 
-function help() {
-    // var regPass = document.getElementById("regPass").value;
-    // var regRePass = document.getElementById("regRePass").value;
-    // var checkedValue = document.querySelector('.gender:checked').value;
-    // var regName = document.getElementById("regName").value;
-    // regUser = document.getElementById("regUser").value;
-    // regPass = document.getElementById("regPass").value;
-    // var address = document.getElementById("address").value;
-    // var phone = document.getElementById("regTel").value;
-    // var newUser = new Person(regUser, regName, phone, regPass, address);
-    // userArray.push(newUser);
-    //
-    // alert(userArray.length);
-    var e = document.getElementById("lang");
-    var strUser = e.options[e.selectedIndex].value;
-    var now=document.getElementById("age").value;
-    alert(now);
+        var currentUser = localStorage.getItem("Name");
+        var len = users.length;
+        for (i = 0; i < len; i++) {
+            if (users[i].userName === currentUser) {
+
+                var list = document.getElementsByTagName("li");
+                list[0].innerHTML = "Full Name: " + users[i].fullName;
+                list[1].innerHTML = "User Name: " + users[i].userName;
+                list[2].innerHTML = "Age: " + users[i].age;
+                list[3].innerHTML = "Phone: " + users[i].phone;
+                list[4].innerHTML = "Gender: " + users[i].gender;
+                list[5].innerHTML = "Address: " + users[i].address;
+                list[6].innerHTML = "Password: " + users[i].password;
+
+            }
+        }
 
 
-}
+    }
 
