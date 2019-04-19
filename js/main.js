@@ -669,6 +669,7 @@ function regValidation() {
     var newUser = new Person(regUser, regName, phone, regPass, address);
     var ageUser = document.getElementById("age").value;
     userArray.push(newUser);
+    localStorage.setItem("array", JOSN.stringify(userArray));
     if (ageUser < 0) {
         alert("Age must bo positive");
 
@@ -688,7 +689,7 @@ function regValidation() {
         alert("Password doesn't match");
         return false;
     }
-   
+
     return true;
 }
 

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="902eecc5-32e7-4d1a-a0fb-600cef602e59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/register-page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="693" column="21" selection-start-line="693" selection-start-column="21" selection-end-line="693" selection-end-column="21" />
+            <state relative-caret-position="-298">
+              <caret line="672" column="22" selection-start-line="672" selection-start-column="22" selection-end-line="672" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -177,12 +175,12 @@
       <workItem from="1555478307805" duration="362000" />
       <workItem from="1555481958359" duration="2000000" />
       <workItem from="1555484488580" duration="1121000" />
-      <workItem from="1555646417253" duration="597000" />
+      <workItem from="1555646417253" duration="1915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5377000" />
+    <option name="totallyTimeSpent" value="6695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -260,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="693" column="21" selection-start-line="693" selection-start-column="21" selection-end-line="693" selection-end-column="21" />
+        <state relative-caret-position="-298">
+          <caret line="672" column="22" selection-start-line="672" selection-start-column="22" selection-end-line="672" selection-end-column="22" />
         </state>
       </provider>
     </entry>
