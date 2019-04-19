@@ -678,40 +678,39 @@ function regValidation() {
             return false;
         }
 
-        if (regPass !== regRePass) {
-            var now = document.getElementsByTagName("input");
-            for (var i = 0; i < now.length; i++) {
-                now[i].value = "";
-            }
-            alert("Password doesn't match");
-            return false;
-        }
-
-        return true;
-
 
     }
+    if (regPass !== regRePass) {
+        now = document.getElementsByTagName("input");
+        for (var i = 0; i < now.length; i++) {
+            now[i].value = "";
+        }
+        alert("Password doesn't match");
+        return false;
+    }
+   
+    return true;
 }
 
-    function iterate() {
+function iterate() {
 
-        var currentUser = localStorage.getItem("Name");
-        var len = users.length;
-        for (i = 0; i < len; i++) {
-            if (users[i].userName === currentUser) {
+    var currentUser = localStorage.getItem("Name");
+    var len = users.length;
+    for (i = 0; i < len; i++) {
+        if (users[i].userName === currentUser) {
 
-                var list = document.getElementsByTagName("li");
-                list[0].innerHTML = "Full Name: " + users[i].fullName;
-                list[1].innerHTML = "User Name: " + users[i].userName;
-                list[2].innerHTML = "Age: " + users[i].age;
-                list[3].innerHTML = "Phone: " + users[i].phone;
-                list[4].innerHTML = "Gender: " + users[i].gender;
-                list[5].innerHTML = "Address: " + users[i].address;
-                list[6].innerHTML = "Password: " + users[i].password;
+            var list = document.getElementsByTagName("li");
+            list[0].innerHTML = "Full Name: " + users[i].fullName;
+            list[1].innerHTML = "User Name: " + users[i].userName;
+            list[2].innerHTML = "Age: " + users[i].age;
+            list[3].innerHTML = "Phone: " + users[i].phone;
+            list[4].innerHTML = "Gender: " + users[i].gender;
+            list[5].innerHTML = "Address: " + users[i].address;
+            list[6].innerHTML = "Password: " + users[i].password;
 
-            }
         }
-
-
     }
+
+
+}
 

@@ -238,6 +238,9 @@ input[type=checkbox], input[type=radio] {
 input#regPass {
     margin-top: 5px;
 }
+.input-group {
+    margin-top: 10px;
+}
 
 /*Profile Page*/
 
